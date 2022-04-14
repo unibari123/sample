@@ -23,9 +23,20 @@ h5{
   text-transform: uppercase;
   font-size: 1.3rem;
 }
+h1{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
 p{
   
   font-size: 15px;
+}
+li{
+
+  
+    font-size: 15px;
+  
 }
 body{
   padding: 20px;
@@ -91,12 +102,14 @@ header .logo{
 }
 
 header .navigation a{
+  text-transform: uppercase;
+
   color: #000;
-  font-size: 20px;
+  font-size: 14px;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
-  padding: 2px 15px;
+  padding: 2px ;
   border-radius: 20px;
   transition: 0.3s;
   transition-property: background;
@@ -105,11 +118,11 @@ header .navigation i{
   font-size: 35px;
 }
 header .navigation a:not(:last-child){
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 header .navigation a:hover{
-  background: #fff;
+  background: #D3D3D3  ;
 }
 
 
