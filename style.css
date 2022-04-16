@@ -302,3 +302,78 @@ margin:auto;
 
 
 
+
+
+
+
+
+/* ================ Start Main Navbar ================ */
+
+.uk-navbar-item,
+.uk-navbar-nav>li>a,
+.uk-navbar-toggle {
+    column-gap: 0.75em;
+}
+
+.header-nav {
+    height: 10vh !important;
+    background-color: transparent !important;
+}
+
+.header-nav .uk-navbar,
+.header-nav .uk-navbar-nav,
+.header-nav .uk-navbar-nav li,
+.header-nav .uk-container> :last-child {
+    height: 100%;
+}
+
+.header-nav .uk-icon-button,
+.header-nav .uk-navbar-nav>li>a {
+    color: #000 !important;
+}
+
+.header-nav .uk-navbar-nav li,
+.header-nav .uk-navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.uk-sticky.uk-navbar-sticky.uk-sticky-below.uk-sticky-fixed {
+    /* background: rgba(44, 51, 81, 0.7) !important; */
+    z-index: 99999;
+}
+
+.uk-sticky.uk-navbar-sticky.uk-sticky-below.uk-sticky-fixed .uk-navbar-toggle {
+    color: #000;
+}
+
+.uk-icon-button {
+    background: rgba(44, 53, 49, 0) !important;
+}
+
+.uk-button-default {
+    color: #000 !important;
+    border: 1px solid #000 !important;
+}
+
+
+/* ================ End Main Navbar ================ */
+
+
+/* ================ Start Footer ================ */
+
+#contact .uk-navbar {
+    background-color: rgba(44, 53, 49, 0) !important;
+}
+
+#contact h1,
+a {
+    color: #000 !important;
+}
+
+
+/* ================ End Footer ================ */

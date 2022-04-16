@@ -97,9 +97,17 @@ model-viewer {
 </style>
           <p>Explore the beta version of our metaverse, each piece of our 3,300 NFTs represent
 one exact piece of land in our metaverse. Find your piece of land and our partners’
-Headquarters here! </p><br><p style="text-align: center;">To be revealed!!</p><br>
-<model-viewer src="school/school.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+Headquarters here! </p><br><h5 style="text-align: center;">To be revealed!!</h5><br>
+<!-- <model-viewer src="school/school.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer> -->
+<div class="w3-content w3-display-container">
+  <img class="mySlides10" src="img/model slider/coast_preview2.jpg" style="width:100%">
+  <img class="mySlides10" src="img/model slider/desert_preview1.jpg" style="width:100%">
+  <img class="mySlides10" src="img/model slider/grasslands_preview.jpg" style="max-width:100%">
+  <img class="mySlides10" src="img/model slider/mountain_preview2.jpg" style="width:100%">
 
+  <button class="w3-button1 w3-black w3-display-left" onclick="plusDivs(-1, 9)">&#10094;</button>
+<button class="w3-button1 w3-black w3-display-right" onclick="plusDivs(1, 9)">&#10095;</button>
+</div>
 <style>
 div.gallery {
  
@@ -155,7 +163,7 @@ div.desc {
       
 <div class="responsive">
   <div class="gallery">
-    <model-viewer class="3d" src="school/school.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+    <model-viewer class="3d" src="models/BallonA1.gltf" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
 
     <div class="desc">Parlay <br>(Deed #1237, Mountain)
     </div>
@@ -361,16 +369,26 @@ land, each property yielding different rental returns according to tiers. Please
 <div class="clear"><br></div>
    <h5 style="color:#226A80"><b>Retail Stores</b></h5>
    <style>
+     
      .w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
 .w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
 .w3-button:hover{color:#fff!important;background-color:#000!important}
+.w3-button1:hover{color:#fff!important;background-color:#000!important}
+
 .w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
 .w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
 .w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:black;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-   </style>
+.w3-button1{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:black;background-color:whitesmoke;text-align:center;cursor:pointer;white-space:nowrap}
+ 
+.w3-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3-large{font-size:18px!important}
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+
+ </style>
 <div class="columns">
   <ul class="price">
-    <li class="header" style="background-color:#FFD700;color: #111;">Gold</li>
+    <li class="header" style="background-color:#E1C340;color: #FFFFFF;">Gold</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey"><div class="row">
   <div class="column">
@@ -386,7 +404,7 @@ land, each property yielding different rental returns according to tiers. Please
 
 <div class="columns">
   <ul class="price">
-    <li class="header" style="background-color:#E5E4E2;color: #111;">Platinum</li>
+    <li class="header" style="background-color:#D7D7D7;color: #172243;">Platinum</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey">
       <div class="w3-content w3-display-container">
@@ -401,7 +419,7 @@ land, each property yielding different rental returns according to tiers. Please
 
 <div class="columns">
   <ul class="price">
-    <li class="header" style="background-color: #B9F2FF;color: #5865F2;">Diamond</li>
+    <li class="header"  style="background-color:#172243;color: #FFFFFF;"">Diamond</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey">
       <div class="w3-content w3-display-container">
@@ -419,7 +437,7 @@ land, each property yielding different rental returns according to tiers. Please
 <h5 style="color:#226A80"><br><b>Entertainment Venues</b></h5>
 <div class="columns">
   <ul class="price">
-    <li class="header">Gold</li>
+    <li class="header" style="background-color:#E1C340;color: #FFFFFF;">Gold</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey"><div class="row">
   <div class="column">
@@ -438,7 +456,7 @@ land, each property yielding different rental returns according to tiers. Please
 
 <div class="columns">
   <ul class="price">
-    <li class="header" style="background-color:#04AA6D">Platinum</li>
+    <li class="header"  style="background-color:#D7D7D7;color: #172243;">Platinum</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey">
       <div class="w3-content w3-display-container">
@@ -455,7 +473,7 @@ land, each property yielding different rental returns according to tiers. Please
 
 <div class="columns">
   <ul class="price">
-    <li class="header">Diamond</li>
+    <li class="header"  style="background-color:#172243;color: #FFFFFF;">Diamond</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey">
       <div class="w3-content w3-display-container">
@@ -474,7 +492,7 @@ land, each property yielding different rental returns according to tiers. Please
 <h5 style="color:#226A80"><br>Commercial Venues</h5>
 <div class="columns">
   <ul class="price">
-    <li class="header">Gold</li>
+    <li class="header" style="background-color: #E1C340; color: #FFFFFF;">Gold</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey"><div class="row">
   <div class="column">
@@ -493,7 +511,7 @@ land, each property yielding different rental returns according to tiers. Please
 
 <div class="columns">
   <ul class="price">
-    <li class="header" style="background-color:#04AA6D">Platinum</li>
+    <li class="header"  style="background-color:#D7D7D7;color: #172243;">Platinum</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey">
       <div class="w3-content w3-display-container">
@@ -510,7 +528,7 @@ land, each property yielding different rental returns according to tiers. Please
 
 <div class="columns">
   <ul class="price">
-    <li class="header">Diamond</li>
+    <li class="header"  style="background-color:#172243;color: #FFFFFF;">Diamond</li>
     <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
     <li class="grey">
       <div class="w3-content w3-display-container">
@@ -547,8 +565,8 @@ land, each property yielding different rental returns according to tiers. Please
 </div>
   </div></center></div></section>
   <script>
-    var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1];
-    var slideId = ["mySlides1", "mySlides2", "mySlides3",  "mySlides4",  "mySlides5",  "mySlides6", "mySlides7", "mySlides8", "mySlides9" ]
+    var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var slideId = ["mySlides1", "mySlides2", "mySlides3",  "mySlides4",  "mySlides5",  "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10" ]
     showDivs(1, 0);
     showDivs(1, 1);
     showDivs(1, 2);
@@ -558,7 +576,7 @@ land, each property yielding different rental returns according to tiers. Please
     showDivs(1, 6);
     showDivs(1, 7);
     showDivs(1, 8);
-    
+    showDivs(1, 9);
     function plusDivs(n, no) {
       showDivs(slideIndex[no] += n, no);
     }
