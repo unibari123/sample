@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Registry</title>
+    <!-- TODO: update page title -->
+    <script type="module">
+        document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');
+    </script>
+    <meta name="description" content="The official collection of 3,300 land-based #NFTs. A world to own, trade, and make profit. Strategy P2E metaverse game on Solana. Collect deeds, earn rights, and grow your land empire.">
+    <!-- TODO: update meta description -->
+    <meta property="og:title" content="The Registry">
+    <!-- TODO: update og:title -->
+    <meta property="og:url" content="https://www.theregistry.world/">
+    <!-- TODO: update og:url -->
+    <meta property="og:description" content="The official collection of 3,300 land-based #NFTs. A world to own, trade, and make profit. Strategy P2E metaverse game on Solana. Collect deeds, earn rights, and grow your land empire.">
+    <!-- TODO: update og:description -->
+    <meta property="og:image" content="/path/to/image">
+    <!-- TODO: og:image -->
+    <meta property="og:image:alt" content="The Registry">
+    <!-- TODO: update og:image:alt -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="large-image-twitter.jpg">
+    <!-- TODO: update twitter:cared -->
+    <link rel="canonical" href="https://www.theregistry.world/">
+    <!-- TODO: update canonical link -->
+    <link rel="icon" href="/assets/thregistry_logo.svg">
+    <!-- <link rel="icon" href="/assets/" type="image/svg+xml"> -->
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <!-- TODO: update web app manifest file -->
+    <meta name="theme-color" content="#2c3351">
+    <!-- TODO: update meta theme color -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="/css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+
+    <style>
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+            /* background-image: linear-gradient(90deg, rgba(83, 47, 107, 1) 0%, rgba(13, 13, 108, 1) 50%, rgba(63, 156, 136, 1) 100%); */
+        }
+        
+         ::-webkit-scrollbar {
+            width: 0;
+            /* Remove scrollbar space */
+            background: transparent;
+            /* Optional: just make scrollbar invisible */
+        }
+    </style>
+    <!-- Css file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="canvas-holder">
+        <canvas id="gradient-canvas" class="canvas">
+        </canvas>
+    </div>
+
+
+
+    <!-- Main Navbar -->
+    <div class="header-nav" uk-sticky="animation: uk-animation-slide-top;cls-active:uk-navbar-sticky;show-on-up:true;sel-target:.uk-navbar-container;">
+        <nav class="uk-container uk-navbar">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a class="uk-navbar-item uk-logo" href="#" uk-scroll><img src="/assets/favicon-32x32.png" alt="">The Registry
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@m">
+                    <li><a class="uk-text-large" href="#mission" uk-scroll>MISSION</a></li>
+                    <li><a class="uk-text-large" href="#roadmap" uk-scroll>ROADMAP</a></li>
+                    <li><a class="uk-text-large" href="#timeline" uk-scroll>TIMELINE</a></li>
+                    <li><a class="uk-text-large" href="#team" uk-scroll>TEAM</a></li>
+                    <li><a class="uk-text-large" href="#faq" uk-scroll>FAQ</a></li>
+                    <li><a class="uk-text-large" href="#contact" uk-scroll>CONTACT</a></li>
+                    <div class="uk-navbar-item">
+                        <li>
+                            <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="discord" uk-tooltip="Private Discord"></a>
+                        </li>
+                    </div>
+                    <div class="uk-navbar-item">
+                        <li>
+                            <a href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                        </li>
+                    </div>
+                    <div class="uk-navbar-item">
+                        <li>
+                            <a href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                        </li>
+                    </div>
+                    <div class="uk-navbar-item">
+                        <li><a class="uk-button uk-button-default rounded-btn" href="" uk-tooltip="Mint Date TBA">Mint</a></li>
+                    </div>
+                </ul>
+                <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #sidenav" style="min-height: 0;"></a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div id="sidenav" uk-offcanvas="flip: true; mode: reveal" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav">
+                <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="#mission" uk-scroll>MISSION</a></li>
+                <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="#roadmap" uk-scroll>ROADMAP</a></li>
+                <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="#timeline" uk-scroll>TIMELINE</a>
+                </li>
+                <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="#team" uk-scroll>TEAM</a></li>
+                <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="#faq" uk-scroll>FAQ</a></li>
+                <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="#contact" uk-scroll>CONTACT</a></li>
+                <div class="uk-navbar-item">
+                    <li>
+                        <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="discord" uk-tooltip="Private Discord"></a>
+                    </li>
+                    <li>
+                        <a uk-toggle="target: #sidenav" href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                    </li>
+                    <li>
+                        <a uk-toggle="target: #sidenav" href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                    </li>
+                </div>
+                <div class="uk-navbar-item">
+                    <li><a class="uk-button uk-button-default rounded-btn" href="#" uk-tooltip="Mint Date TBA">Mint</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default landing-section uk-flex uk-flex-center" uk-height-viewport id="home">
+        <div class="uk-container uk-flex uk-flex-center uk-padding">
+            <div class="uk-width-1-1" uk-grid>
+                <div class="uk-flex uk-flex-column uk-flex-around uk-width-1-2">
+                    <h1 class="uk-heading-medium" style="color: white; margin-bottom: 0px;">The Registry</h1>
+                    <h4 class="" style="color: white;">A world to own, trade and make profit
+                        <br>
+                    </h4>
+                    <div class="uk-card uk-card-default uk-card-hover uk-border-rounded">
+                        <div class="uk-card-badge">New</div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Announcements</h3>
+                            <p>Be ready for the mint!</p>
+                            <p uk-margin="">
+                                <a class="uk-button uk-button-default uk-first-column rounded-btn" href="#" uk-tooltip="Mint Date TBA">Mint</a>
+                                <a class="uk-button uk-button-text uk-margin-small-left" href="whitepaper.html" target="_blank">Whitepaper</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-column uk-flex-around uk-width-1-2">
+                    <img src="/assets/registry_logo.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="uk-section uk-section-default uk-section-large mission" id="mission">
+        <div class="uk-container uk-flex uk-flex-column uk-flex-around">
+            <div class="header-top">
+                <h1 class="uk-heading-medium uk-text-center">OUR MISSION</h1>
+            </div>
+
+            <div class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center mission-content uk-margin-medium" uk-grid>
+
+                <div class="uk-flex-first uk-flex-last@s">
+                    <img src="/assets/DESERT.webp" alt="" width="400">
+                </div>
+                <div class="uk-flex-last uk-flex-first@s ">
+                    <p class="uk-padding-small">The Registry’s mission is to create a strategic city-building simulation, eventually evolving into a uniquely immersive metaverse. Like many other metaverse projects, our goal is to create meaningful social connections while providing
+                        the infrastructure to encourage fluid conversations, creativity, and growth in our community
+                    </p>
+                </div>
+            </div>
+
+            <div class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center mission-content uk-margin-medium" uk-grid>
+
+                <div class="uk-flex-first">
+                    <img src="/assets/GRASSLAND.webp" alt="" width="400" srcset="">
+                </div>
+                <div class="uk-flex-last">
+                    <p class="uk-padding-small">The team (”The Registry”) will launch a collection of 3,300 deeds obtainable through pre-sales, public mint, and secondary trading. Each deed entitles the holder to an equivalent plot of land in our Metaverse. Holders of the deeds
+                        (”The Landowner”) will be entitled to a multitude of perks and benefits, including, but not limited to buildingconstruction rights, staking benefits, token airdrops, rent collection, and many more. Early landowners in our ecosystem
+                        will ultimately become prolific real estate developers in our proprietary Metaverse.
+                    </p>
+                </div>
+            </div>
+
+            <div class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center mission-content uk-margin-medium" uk-grid>
+
+                <div class="uk-flex-first uk-flex-last@s img-btn">
+                    <span class="plus-one" uk-toggle="target: #plus-one" uk-tooltip="Land">+</span>
+                    <span class="plus-two" uk-toggle="target: #plus-two" uk-tooltip="Name">+</span>
+                    <span class="plus-three" uk-toggle="target: #plus-three" uk-tooltip="Tier">+</span>
+                    <div id="plus-one" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">LAND</h2>
+                            <p>Each piece of land one would receive is a section of a larger piece of land, so each piece is unique in terms of elevation, landscape, and features.</p>
+                        </div>
+                    </div>
+                    <div id="plus-two" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">NAME</h2>
+                            <p>
+                                The naming for each deed has the following structure: "(first name]" + "Heights", "Meadows", "Square" (e.g. Laguna Heights. Laguna Meadows, Laguna Square).
+                            </p>
+                            <p>
+                                Each deed belongs to a set of 3 Deeds (situated in close geographical proximity in our Metaverse), represented by the same first word (e.g. Laguna), the second word can be inconsequential. Collect a full district to earn a list of perks in Phase II
+                            </p>
+                        </div>
+                    </div>
+                    <div id="plus-three" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">TIER</h2>
+                            <p>There are a total of 1,100 districts, each district is tiered (Gold, Platinum, Diamond) according to its:</p>
+                            <ul>
+                                <li>Location (proximity to other districts/utilities)</li>
+                                <li>Resources (clean water, energy, materials, etc.)</li>
+                                <li>Landscape (geographical feature of land)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="uk-padding">Deed Anatomy</h2>
+                    <img src="/assets/MOUNTAIN.webp" alt="" width="400" srcset="">
+                </div>
+                <div class="uk-flex-last uk-flex-first@s">
+                    <p class="uk-padding-small">Each deed belongs to a set of 3 Deeds (situated in close geographical proximity in our Metaverse), represented by the same first word (e.g. Laguna), the second word can be inconsequential. Collect a full district to earn a list of
+                        perks in Phase II
+                    </p>
+                </div>
+            </div>
+
+            <div class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center mission-content uk-margin-medium" uk-grid>
+
+                <div class="uk-flex-first">
+                    <img src="/assets/COAST.webp" alt="" width="400" srcset="">
+                </div>
+                <div class="uk-flex-last ">
+                    <p class="uk-padding-small">Collecting matching deeds and building properties is only the start, from there, players will be able to collect rent and operate businesses shops. As the project develops and matures, landowners will not only be able to construct
+                        additional properties, but also upgrade and customize existing properties. This will enable you to unlock higher leasing yields and grow your district’s wealth.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default uk-padding-remove-top">
+        <div id="roadmap">
+            <h1 class="uk-heading-medium uk-text-center">ROADMAP</h1>
+        </div>
+
+        <div id="js-sticky-parallax-images" class="uk-child-width-1-2 uk-grid-roadmap" style="height: 250vh" uk-grid="">
+            <div class="uk-background-default uk-width-expand uk-first-column uk-padding uk-padding-remove-top roadmap-img">
+
+                <div style="height: 75vh;" uk-sticky="bottom: #js-sticky-parallax-images" class="uk-sticky sticky-parallax-img">
+                    <div uk-parallax="target: #js-sticky-parallax-images; y: 50vh, 45vh;">
+                        <img class="uk-position-center-left" src="assets/1. Base Land.webp" alt="" width="1800" height="1200">
+                        <img class="uk-position-center-left" src="assets/2. Only Bulding.webp" alt="" width="1800" height="1200" uk-parallax="target: #js-sticky-parallax-images; start: 150vh; end: 100% + 100vh - 200vh; opacity: 0,1" style="opacity: 0;">
+                        <img class="uk-position-center-left" src="assets/4. Complete.webp" alt="" width="1800" height="1200" uk-parallax="target: #js-sticky-parallax-images; start: 250vh; end: 100% + 100vh - 270vh; opacity: 0,1" style="opacity: 0;">
+                    </div>
+                </div>
+                <div class="uk-sticky-placeholder" style="height: 50%; margin: 0px;" hidden="">
+
+                </div>
+
+            </div>
+            <div class="uk-width-expand uk-padding uk-padding-remove-top roadmap-phases parallax-phase">
+
+                <div style="height: 75vh;">
+
+                </div>
+
+                <div class="uk-flex uk-flex-middle" style="height: 50vh;">
+                    <div>
+                        <h1>Phase I: Obtain Deeds</h1>
+
+                        <p>Our collection of 3,300 deeds will be the first keys to unlock a lucrative real estate business for the future
+                        </p>
+                        <h4>As a Deed Owner, you will receive:
+                        </h4>
+                        <ul class="uk-list uk-list-decimal">
+                            <li>Deeds, giving access and rights to a plot of land</li>
+                            <li>The ability to stake and earn tokens</li>
+                            <li>The ability to build, upgrade and lease out properties</li>
+                            <li>Access to our DAO community and other NFT communities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="uk-flex uk-flex-middle" style="height: 50vh;">
+                    <div>
+
+                        <h1>Phase II: Infrastructure, Properties, and Tokenomics</h1>
+
+                        <p>After the mint, The Registry will ensure secondary markets and trading services are online as soon as possible.
+
+                        </p>
+                        <p>Subsequently, district owners will receive a basic building corresponding to your land tier.
+                        </p>
+                        <p>We will also introduce a staking mechanism to provide stakers with regular token airdrops. The more deeds you own, the more tokens you will receive!</p>
+
+                    </div>
+                </div>
+
+                <div class="uk-flex uk-flex-middle uk-padding-remove-top" style="min-height: 80vh;">
+                    <div>
+
+                        <h1>Phase III: Our Metaverse</h1>
+                        <dl class="uk-description-list uk-description-list-divider">
+                            <dt>Cross-Community Collaboration</dt>
+                            <dd>Collaborate with avatar/PFP NFTs to enter our Metaverse. Our partners will be able to build their own headquarters on our Metaverse, allowing their holders to enter our Metaverse.
+                            </dd>
+                            <dt>Renting Space</dt>
+                            <dd>Allow landowners to lease their land and space (e.g. flats, offices, rooms, halls, venues) to visitors of our Metaverse.</dd>
+                            <dt>Prepackaged Businesses</dt>
+                            <dd>We envision a Metaverse where value creation is also democratized. We will be using revenue generated from the first two phases to build standard business solutions allowing IRL businesses to integrate with The Registry’s metaverse.
+                                We will provide the digital infrastructure (e.g., digital space and layout, backend ecommerce workflow etc.) for purchase, so you focus on creating and operating your business under the registry.
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="uk-section uk-section-default timeline">
+        <div class="uk-container uk-flex uk-flex-center uk-padding uk-flex-column" id="timeline">
+            <h1 class="uk-heading-medium uk-text-center">TIMELINE</h1>
+            <!-- The Timeline -->
+            <div class="timeline-section">
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date timeline-date-odd">2022 Q1</div>
+                        <div class="timeline-content">
+                            <h3>Phase 1</h3>
+                            <ul>
+                                <li>Community management and social media presence</li>
+                                <li>Whitepaper launch</li>
+                                <li>Collaboration with blue-chip NFT projects</li>
+                                <li>Map Reveal</li>
+                                <li>Pre-sale</li>
+                                <li>Public Mint</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 Q2</div>
+                        <div class="timeline-content">
+                            <h3>Phase 2</h3>
+
+                            <ul>
+                                <li>Secondary Listing</li>
+                                <li>Grape verification</li>
+                                <li>DAO setup and voting infrastructure</li>
+                                <li>Launch staking and utility token</li>
+                                <li>Trading / escrow services</li>
+                                <li>Set up marketplace for properties upgrades</li>
+                                <li>Property lineup reveal</li>
+                                <li>Property construction</li>
+                                <li>Property upgrades</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date timeline-date-odd">2022 Q3</div>
+                        <div class="timeline-content">
+                            <h3>Phase 3</h3>
+                            <ul>
+                                <li>Launch Metaverse beta</li>
+                                <li>Partners to enter Metaverse</li>
+                                <li>Leasing of properties</li>
+                                <li>Prepackaged Metaverse business models</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default" id="team">
+        <div class="uk-container uk-padding uk-text-center">
+            <h1>MEET THE TEAM</h1>
+        </div>
+        <div class="uk-container">
+            <div class="uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s team-content" uk-grid uk-height-match="target: > div > .uk-card > .uk-card-body">
+
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-small" uk-toggle="target: #modal-naturalde">
+                        <div class="uk-card-media-top uk-cover-container">
+                            <img src="assets/president-naturalde.webp" alt="Card image cap" uk-cover>
+                            <canvas width="125" height="300"></canvas>
+                        </div>
+                        <div class="uk-card-body uk-text-center">
+                            <h3 class="uk-card-title">President NaturalDe</h3>
+                            <p>Co-founder</p>
+                        </div>
+                        <div class="uk-card-footer">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-naturalde" class="uk-flex-top uk-modal" uk-modal="" tabindex="-1">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="assets/president-naturalde.webp" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <h2 class="uk-modal-title">President NaturalDe</h2>
+                        <p class="uk-text-meta">Co-founder</p>
+                        <p>NaturalDe studied CS and Math in college, and has an interest in IRR analysis and building transaction comps. While working from home, he peruses a wide array of finance publications (mainly Whomst Intern and Wall Street Oasis).
+                            NaturalDe has dreams of one day becoming Whomst MD.</p>
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-small" uk-toggle="target: #modal-killerkimchi">
+                        <div class="uk-card-media-top uk-cover-container">
+                            <img src="assets/premier-killerkimchi.webp" alt="Card image cap" uk-cover>
+                            <canvas width="125" height="300"></canvas>
+                        </div>
+                        <div class="uk-card-body uk-text-center">
+                            <h3 class="uk-card-title">Premier KillerKimchi</h3>
+                            <p>Marketing Lead</p>
+                        </div>
+                        <div class="uk-card-footer">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-killerkimchi" class="uk-flex-top uk-modal" uk-modal="" tabindex="-1">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="assets/premier-killerkimchi.webp" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <h2 class="uk-modal-title">Premier Killerkimchi</h2>
+                        <p class="uk-text-meta">Marketing Lead</p>
+                        <p>Killerkimchi loves adventure, exploring, travelling, and is an NFT enthusiast! She has a strong background in digital marketing and an affinity for designing, with her day to day involving data science. You’ll find her trying new
+                            foods and spending time in cafes always for inspiration. Get ready to learn more about this amazing project! 🙌</p>
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-small" uk-toggle="target: #modal-lemonpeel">
+                        <div class="uk-card-media-top uk-cover-container">
+                            <img src="assets/governor-lemonpeel.webp" alt="Card image cap" uk-cover>
+                            <canvas width="125" height="300"></canvas>
+                        </div>
+                        <div class="uk-card-body uk-text-center">
+                            <h3 class="uk-card-title">Governor Lemonpeel</h3>
+                            <p>Co-founder</p>
+                        </div>
+                        <div class="uk-card-footer">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-lemonpeel" class="uk-flex-top uk-modal" uk-modal="" tabindex="-1">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="assets/governor-lemonpeel.webp" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <h2 class="uk-modal-title">Governor Lemonpeel</h2>
+                        <p class="uk-text-meta">Co-founder</p>
+                        <p>Lemonpeel has a background in Finance, and was introduced to the NFT world through a group of likeminded friends back in college. He is interested in pushing the boundaries of NFTs as an asset class and envisions layers of real-world
+                            utility atop what is currently available. Outside of work, you can find him on the golf course, playing Gran Tourismo, or munching on a PB&J. </p>
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-small" uk-toggle="target: #modal-titus">
+                        <div class="uk-card-media-top uk-cover-container">
+                            <img src="assets/chief-titus.webp" alt="Card image cap" uk-cover>
+                            <canvas width="125" height="300"></canvas>
+                        </div>
+                        <div class="uk-card-body uk-text-center">
+                            <h3 class="uk-card-title">Chief Titus</h3>
+                            <p>Lead Developer</p>
+                        </div>
+                        <div class="uk-card-footer">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-titus" class="uk-flex-top uk-modal" uk-modal="" tabindex="-1">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="assets/chief-titus.webp" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <h2 class="uk-modal-title">Chief Titus</h2>
+                        <p class="uk-text-meta">Lead Developer</p>
+                        <p>Chief Titus has a background in Finance, and has a very strong interest in NFT investment. He holds multiple blue chips ETH and Solana projects and has strong connections to whales in the NFT space. He will contribute significantly
+                            to the project by leveraging his deep and solid understanding of this new asset class.
+                        </p>
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-small" uk-toggle="target: #modal-mduck">
+                        <div class="uk-card-media-top uk-cover-container">
+                            <img src="assets/counselor-mduck.webp" alt="Card image cap" uk-cover>
+                            <canvas width="125" height="300"></canvas>
+                        </div>
+                        <div class="uk-card-body uk-text-center">
+                            <h3 class="uk-card-title">Counselor M.Duck</h3>
+                            <p>Blockchain Developer</p>
+                        </div>
+                        <div class="uk-card-footer">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-mduck" class="uk-flex-top uk-modal" uk-modal="" tabindex="-1">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="assets/counselor-mduck.webp" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <h2 class="uk-modal-title">Counselor M.Duck</h2>
+                        <p class="uk-text-meta">Blockchain Developer</p>
+                        <p>He is a seasoned software engineering professional with multiple years of experience in programming. His background is in data science and automation with a focus on Data Analysis Solutions. He has been in crypto for 5 years and
+                            specializes in blockchain and on-chain data analysis. He will be mainly working on blockchain integration and wallet authentication system.
+                        </p>
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-small" uk-toggle="target: #modal-sixthreeone">
+                        <div class="uk-card-media-top uk-cover-container">
+                            <img src="assets/minister-sixthreeone.webp" alt="Card image cap" uk-cover>
+                            <canvas width="125" height="300"></canvas>
+                        </div>
+                        <div class="uk-card-body uk-text-center">
+                            <h3 class="uk-card-title">Minister SixThreeOne</h3>
+                            <p>Lead Web Developer</p>
+                        </div>
+                        <div class="uk-card-footer">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-sixthreeone" class="uk-flex-top uk-modal" uk-modal="" tabindex="-1">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                            <img src="assets/minister-sixthreeone.webp" alt="" uk-cover>
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <h2 class="uk-modal-title">Minister SixThreeOne</h2>
+                        <p class="uk-text-meta">Lead Web Developer</p>
+                        <p>SixThreeOne has a background in Fintech, who has recently fell into the rabbit hole of Web3. He holds strong conviction towards the future of DeFi and constantly finds connection and insights from other projects to add value in
+                            the project he has been involved. Outside of work, you can find him hunting for yields. WAGMI
+                        </p>
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default uk-section-large" id="faq">
+
+        <div class="uk-container">
+            <h1 class="uk-text-center">FAQ</h1>
+            <ul uk-tab class="uk-subnav uk-subnav-pill">
+                <li><a href="#">The Registry</a></li>
+                <li><a href="#">Technical</a></li>
+            </ul>
+
+            <ul class="uk-switcher uk-margin">
+                <li>
+                    <ul uk-accordion="multiple: true">
+                        <li>
+                            <a class="uk-accordion-title" href="#">1. Who is The Registry?</a>
+                            <div class="uk-accordion-content">
+                                <p>The Registry is a governing body that will launch a collection of 3,300 deeds obtainable through pre-sales, public mint, and secondary trading. Each deed entitles the holder to an equivalent piece of land representing a
+                                    plot of land in our Metaverse. The Registry is the governing group of its Metaverse. It is the central architecture behind future marketplaces for property action cards.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="uk-accordion-title" href="#">2. What will The Registry look like in the
+                                future?</a>
+                            <div class="uk-accordion-content">
+                                <p>Our end-goal is to build an inclusive metaverse, promoting the idea of "democratization of the metaverse design process", meaning holders can take part in creating the metaverse.</p>
+                                <p>Once someone owns their piece of land, the type of property that they develop is up to the holder, it can be residential, commercial, public, (ex: malls, businesses, hotels, small businesses, etc).</p>
+                                <p>We hope to achieve a well-balanced ecosystem in our metaverse (our world won't work if there are only malls in it 😂!. That’s why right now we are collaborating with well-established projects, with each community having
+                                    their unique edge. For example, we will be modelling a school, malls, research labs, retail stores, social headquarters, and so much more to create a balanced ecosystem for our metaverse players in the future.
+                                </p>
+                                <p>Additionally, a major aspect is our "out-of-the-box business model". Another aim of our metaverse is to support individuals / small-medium sized businesses who want to enter the metaverse. Our metaverse can offer office
+                                    spaces from commercial buildings / shops in malls, so we can help them achieve their goals via our platform without needing to overcome a massive barrier. We will also have educational resources and knowledge based
+                                    organizations in our world to offer for those who enter.</p>
+                                <div class="uk-flex uk-flex-center"><img src="/assets/faq_vision_diagram.webp" alt="" srcset="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">3. What’s the Metaverse?</a>
+                            <div class="uk-accordion-content">
+                                <p>The metaverse is a digital reality that combines aspects of social media, online gaming, augmented reality (AR), virtual reality (VR), and cryptocurrencies to allow users to interact virtually. Augmented reality overlays
+                                    visual elements, sound, and other sensory input onto real-world settings to enhance the user experience.
+                                </p>
+                                <p>Our metaverse is the large piece of land comprised of the 3,300 pieces of square plots of land, which will host a balanced ecosystem where enterprises, businesses, social organizations, and e-commerce platforms can thrive.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">4. What is a District?</a>
+                            <div class="uk-accordion-content">
+                                <p>Each district consists of 3 predetermined adjacent pieces of land with the same name. Therefore, there are 1,100 unique districts consisting of 3,300 pieces of land.</p>
+                                <p>The existing piece of land on your deed. Each plot of land belongs to one of four archetypes Grassland, Coast, Desert, or Mountain.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">5. What is a Deed?</a>
+                            <div class="uk-accordion-content">
+                                <p>A deed is your land contract in the form of a card. It contains your entitled piece of land, the name, and the tier. The naming for each deed has the following structure: “[first name]” + “Heights”, “Meadows”, “Square”
+                                    (e.g. Laguna Heights, Laguna Meadows, Laguna Square).</p>
+                                <p>Once you purchase a deed, you become an official “Landowner” in our Metaverse.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">6. Will The Registry have a marketplace? What can we
+                                purchase there?</a>
+                            <div class="uk-accordion-content">
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>Marketplace</dt>
+                                    <dd>Yes, we will have a marketplace!</dd>
+                                    <dt>Property Action Cards</dt>
+                                    <dd>These are action items to be revealed later!</dd>
+                                    <dt>Construction Rights</dt>
+                                    <dd>Once a landowner obtains 3 pieces of land in the same district (owning a full district), they will receive immediate construction rights to build a building according to their tier. However, if you purchase Property
+                                        Action Cards with our tokens, it is an alternative way of obtaining Construction Rights and bypasses the district ownership requirement (you can have just one deed and build).
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">7. How will I be able to use my Deed in the
+                                future?</a>
+                            <div class="uk-accordion-content">
+                                <dl class="uk-description-list">
+                                    <dt>Buildings</dt>
+                                    <dd>You can use the deed to socialize, connect, gather, start a business, host venues, launch your e-commerce platform, start an organization, and so much more! The possibilities are endless.</dd>
+                                    <dt>Types of Buildings</dt>
+                                    <dd>To be revealed!</dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">8. How can I profit with The Registry?</a>
+                            <div class="uk-accordion-content">
+                                <p>You can profit by renting out your buildings (passive income), hosting social venues (such as concerts, parks), or using the space to host your small enterprise / commercial business to sell products!</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <ul uk-accordion="multiple: true">
+                        <li>
+                            <a class="uk-accordion-title" href="#">1. What is an NFT?</a>
+                            <div class="uk-accordion-content">
+                                <p>NFT stands for non-fungible token, a unique and non-interchangeable unit of data stored on a digital ledger that uses blockchain technology to establish proof of ownership. NFTs are collectible digital assets that hold
+                                    value, just like how physical art holds value, so do NFTs. NFTs are a lot like cryptocurrencies such as Bitcoin and Ethereum. However, an NFT is completely unique, and it can't be exchanged like-for-like, which is where
+                                    non-fungible starts to make sense. The file stores extra information that elevates it above pure currency and brings it into the realm of, well, anything, really.
+                                    <br> More extensive explanation: <a href="https://opensea.io/blog/guides/non-fungible-tokens/" target="_blank">https://opensea.io/blog/guides/non-fungible-tokens/</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">2. What digital wallet should I use when making
+                                transactions?</a>
+                            <div class="uk-accordion-content">
+                                <p>A crypto wallet is a device or application that stores a collection of keys and can be used to send, receive, and track ownership of cryptocurrencies. There are many digital wallets that support Solana, Phantom being one
+                                    of the most popular. Several browser and mobile app based wallets support Solana. Find the right one for you on the <a href="https://solana.com/ecosystem/explore?categories=wallet" target="_blank">Solana Ecosystem</a>                                    page.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">3. What is the token standard utilized for this
+                                project?</a>
+                            <div class="uk-accordion-content">
+                                <p>Solana.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">4. What are gas fees?</a>
+                            <div class="uk-accordion-content">
+                                <p>“Gas fees” are the transaction fees that users pay to miners on a blockchain protocol to have their transaction included in the block. The system works on a standard supply and demand mechanism. If there is more demand
+                                    for transactions, miners can choose to include the transactions that pay more, compelling users to pay more to have their transactions processed quickly and efficiently.
+                                    <br> Learn more in detail here: ​​<a href="https://docs.solana.com/implemented-proposals/transaction-fees" target="_blank">https://docs.solana.com/implemented-proposals/transaction-fees</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">5. When is the launch?</a>
+                            <div class="uk-accordion-content">
+                                <p>Exact launch date is still tentative, please keep an eye out on our socials for updates! We are working hard behind the scenes to perfect the artwork and backend. We will announce the exact date on our Twitter, Discord
+                                    and official website.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">6. What is the total supply?</a>
+                            <div class="uk-accordion-content">
+                                <p>There will be 3,300 deeds.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">7. How much will a Deed cost?</a>
+                            <div class="uk-accordion-content">
+                                <p>To be announced.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">8. How many Deeds can I buy at a time?</a>
+                            <div class="uk-accordion-content">
+                                <p>Depending on your tier, you can purchase specific amounts. More to be revealed later.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">9. Where can I buy The Registry’s Deeds?</a>
+                            <div class="uk-accordion-content">
+                                <p>You will be able to mint The Registry’s Deeds on our official website at the Mint Page (to be announced). Once it is sold out, you will be able to purchase it on the secondary market, e.g. Magic Eden. </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">10. When will the reveal take place?</a>
+                            <div class="uk-accordion-content">
+                                <p>Metadata/rarities will be available within the 1-2 weeks after the public sale ends.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">11. How do I participate in the presale and how do I
+                                get on
+                                the Whitelist?</a>
+                            <div class="uk-accordion-content">
+                                <p>You must be assigned the Whitelist role (Pioneer) to take part in our Presale. As our Whitelist spaces are limited, please check in timely for giveaways and partnerships announced in our Discord and Twitter pages. We will
+                                    also be launching contests + selectively picking positive and active members from the community regularly.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">12. What are the wallets supported for the minting
+                                process?</a>
+                            <div class="uk-accordion-content">
+                                <ul>
+                                    <li>Phantom</li>
+                                    <li>Solflare</li>
+                                    <li>Slope</li>
+                                    <li>Sollet</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default" id="contact">
+        <div class="uk-container" style="color: white;">
+
+            <h1 class="uk-heading-medium uk-text-center" style="color: white;">Stay up-to-date with our project</h1>
+            <nav class="uk-navbar uk-navbar-container">
+                <div class="uk-navbar-center">
+                    <div class="uk-navbar-item">
+                        <ul class="uk-grid-small uk-grid" uk-grid="">
+                            <li class="uk-first-column">
+                                <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="discord" uk-tooltip="Private Discord"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <p class="uk-text-center">Copyright &copy; 2022, The Registry. <br> </span>All trademarks and copyrights belong to their respective owners.
+            </p>
+            <p class="uk-text-center"><a href="https://solana.com/" target="_blank">
+                    Built on the <img alt="" src="assets/solana-sol-logo.svg"
+                        style="width: 24px;display: inline-block;" />
+                    Solana blockchain.
+                </a></p>
+
+        </div>
+    </div>
+
+
+    <script src="js/gradient.min.js"></script>
+
+
+
+    <!-- Content -->
+    <script src="/assets/js/script.js " type="module "></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DCG20L731"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9DCG20L731');
+    </script>
+</body>
+
+</html>

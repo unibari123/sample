@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: #000;
+}
+
+h3 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+h4 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+h5 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+h1 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 15px;
+}
+
+li {
+    font-size: 15px;
+}
+
+body {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.canvas {
+    position: fixed;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+#gradient-canvas {
+    width: 100%;
+    height: 100%;
+    --gradient-color-1: #FFFFFF;
+    --gradient-color-2: #d3d3d3;
+    --gradient-color-3: #CDCDCD;
+    --gradient-color-4: #FFFFFF;
+    z-index: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+label {
+    display: none;
+}
+
+.content {
+    margin: auto;
+    max-width: 1100px;
+}
+
+.content2 {
+    margin: auto;
+    max-width: 800px;
+}
+
+.content .info h2 {
+    color: #226A80;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.content .info h2 span {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.content .info p {
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.content .info-btn {
+    color: #fff;
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.content .info-btn:hover {
+    background: #0C4F60;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icons a {
+    position: relative;
+    color: #111;
+    font-size: 25px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-icons a:not(:last-child) {
+    margin-right: 60px;
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+}
+
+
+/* Responsive CSS */
+
+@media (max-width: 960px) {
+    .content .info h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .content .info h2 span {
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 560px) {
+    .content .info h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .content .info h2 span {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+
+/* ================ Start Main Navbar ================ */
+
+.uk-navbar-item,
+.uk-navbar-nav>li>a,
+.uk-navbar-toggle {
+    column-gap: 0.75em;
+}
+
+.header-nav {
+    height: 10vh !important;
+    background-color: transparent !important;
+}
+
+.header-nav .uk-navbar,
+.header-nav .uk-navbar-nav,
+.header-nav .uk-navbar-nav li,
+.header-nav .uk-container> :last-child {
+    height: 100%;
+}
+
+.header-nav .uk-icon-button,
+.header-nav .uk-navbar-nav>li>a {
+    color: #000 !important;
+}
+
+.header-nav .uk-navbar-nav li,
+.header-nav .uk-navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.uk-sticky.uk-navbar-sticky.uk-sticky-below.uk-sticky-fixed {
+    /* background: rgba(44, 51, 81, 0.7) !important; */
+    z-index: 99999;
+}
+
+.uk-sticky.uk-navbar-sticky.uk-sticky-below.uk-sticky-fixed .uk-navbar-toggle {
+    color: #000;
+}
+
+.uk-icon-button {
+    background: rgba(44, 53, 49, 0) !important;
+}
+
+.uk-button-default {
+    color: #000 !important;
+    border: 1px solid #000 !important;
+}
+
+
+/* ================ End Main Navbar ================ */
+
+
+/* ================ Start Footer ================ */
+
+#contact .uk-navbar {
+    background-color: rgba(44, 53, 49, 0) !important;
+}
+
+#contact h1,
+a {
+    color: #000 !important;
+}
+
+
+/* ================ End Footer ================ */
