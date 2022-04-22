@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Registry</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="uikit2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
@@ -15,68 +16,83 @@
   </div>
 
     <section>
-      <input type="checkbox" id="check">
-      <header>
-       
-        <a href="index.html"><img src="registry_logo.webp" style="width:100px;height:auto;" ></a>
- 
-      
-        <div class="navigation">
-          <a href="index.html">Metaverse</a>
-           <a href="w2t3.html">W2T3 Solutions</a>
-        <a href="https://www.theregistry.world/#roadmap">Roadmap</a>
-        <a href="https://www.theregistry.world/#faq">About Us</a>
-        <a href="https://www.theregistry.world/#faq">FAQs</a>
-        
-          <a href="https://discord.gg/TheRegistry"><i style="padding: 7px;font-size: 35px;color: #5865F2;" class="fab fa-discord"></i></a>
-        </a> 
-        
-        <a href="https://twitter.com/TheRegistryNFT"> <i style="padding: 7px;font-size: 35px;color: #00acee;" class="fab fa-twitter"></i></a>
-        
-          <a href="https://www.instagram.com/theregistry_nft/"> <i style="padding: 7px;font-size: 35px;color: #e95950;" class="fab fa-instagram"></i></a>
-         
-                   <style>
-          .bouton{
-            text-transform: uppercase;
-            font-weight: 800;
-            color: #fff;
-            border-radius: 100px;
-            border: 0px;
-            background-image: linear-gradient(60deg,#FFFF00, #ff8826);
-            height: 40px;
-            width: 100px;
-            transition: box-shadow 0.1s linear;
-          }
-          .bouton:hover{
-            transition: box-shadow 0.1s linear;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: #fff;
-            border-radius: 100px;
-            border: 0px;
-            background-image: linear-gradient(60deg,#ff8826, #FFFF00);
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-            cursor: pointer;
-          }
-          .bouton:active{
-            text-transform: uppercase;
-            font-weight: 800;
-            color: #fff;
-            border-radius: 100px;
-            border: 0px;
-            background-image: linear-gradient(60deg,#FFFF00, #ff8826);
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-            height: 40px;
-            width: 100px;
-          }
-          </style>
-          <button class="bouton" title="Mint Date TBA">Mint</button>
-        </div>
-        <label for="check">
-        <i class="fas fa-bars menu-btn"></i>
-        <i class="fas fa-times close-btn"></i>
-        </label>
-      </header>
+     
+        <!-- Main Navbar -->
+        <div class="header-nav" uk-sticky="animation: uk-animation-slide-top;cls-active:uk-navbar-sticky;show-on-up:true;sel-target:.uk-navbar-container;">
+          <nav class="uk-container uk-navbar">
+              <div class="uk-navbar-left">
+                  <ul class="uk-navbar-nav">
+                      <li>
+                          <a class="uk-navbar-item uk-logo" href="https://www.theregistry.world/" uk-scroll><img src="img/favicon-32x32.png" alt="">THE REGISTRY
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="uk-navbar-right">
+                  <ul class="uk-navbar-nav uk-visible@m">
+                      <li><a class="uk-text-large" href="metaverse.html" uk-scroll>METAVERSE</a></li>
+                      <li><a class="uk-text-large" href="w2t3.html" uk-scroll>W2T3 SOLUTIONS</a></li>
+                      <li><a class="uk-text-large" href="https://www.theregistry.world/#roadmap" uk-scroll>ROADMAP</a></li>
+                      <li><a class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>ABOUT US</a></li>
+                      <li><a class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>FAQ</a></li>
+                      <div class="uk-navbar-item">
+                          <li>
+                            <a href="https://discord.gg/TheRegistry"><i style="font-size: 20px;color: #000000;" class="fab fa-discord"></i></a>
+                          </li>
+                      </div>
+                      <div class="uk-navbar-item">
+                          <li>
+                              <a href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                          </li>
+                      </div>
+                      <div class="uk-navbar-item">
+                          <li>
+                              <a href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                          </li>
+                      </div>
+                      <div class="uk-navbar-item">
+                          <li><a class="uk-button uk-button-default rounded-btn" href="" uk-tooltip="Mint Date TBA">Mint</a></li>
+                      </div>
+                  </ul>
+                  <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #sidenav" style="min-height: 0;"></a>
+              </div>
+          </nav>
+      </div>
+    
+    
+      <div id="sidenav" uk-offcanvas="flip: true; mode: reveal" class="uk-offcanvas">
+          <div class="uk-offcanvas-bar">
+              <ul class="uk-nav">
+            
+                  <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="metaverse.html" uk-scroll>METAVERSE</a></li>
+                  <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="w2t3.html" uk-scroll>W2T3 SOLUTIONS</a></li>
+                  <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="https://www.theregistry.world/#roadmap" uk-scroll>ROADMAP</a>
+                  </li>
+                  <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>ABOUT US</a></li>
+                  <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>FAQ</a></li>
+                  <div class="uk-navbar-item">
+                      <li>
+                        <a href="https://discord.gg/TheRegistry"><i style="font-size: 20px;color: #000000;" class="fab fa-discord"></i></a>
+                      </li>
+                      <li>
+                          <a uk-toggle="target: #sidenav" href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                      </li>
+                      <li>
+                          <a uk-toggle="target: #sidenav" href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                      </li>
+                  </div>
+                  <div class="uk-navbar-item">
+                      <li><a class="uk-button uk-button-default rounded-btn" href="#" uk-tooltip="Mint Date TBA">Mint</a>
+                      </li>
+                  </div>
+              </ul>
+          </div>
+      </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+      <script src="main.js"></script>
       <div class="content">
         <div class="info">
         
@@ -206,6 +222,7 @@ globally, each with different utilities in Web 3.0.</p>
       border: 1px solid #ccc;
       margin-bottom: 50px;
       transition: 0.3s;
+      
     }
     
     .card-header {
@@ -499,17 +516,18 @@ globally, each with different utilities in Web 3.0.</p>
         </script>
         <script type="text/javascript" src="src/js/animate.js"></script>
         <footer><center><br><br><br>   <h5 style="color:#111">Stay up-to-date with our project<h5><br>
-          <a href="https://discord.gg/TheRegistry"><i style="padding: 7px;font-size: 45px;color: #5865F2;" class="fab fa-discord"></i></a>
+        
+          <a href="https://discord.gg/TheRegistry"><i style="padding: 7px;font-size: 25px;color: #000000;" class="fab fa-discord"></i></a>
         </a> 
         
-        <a href="https://twitter.com/TheRegistryNFT"> <i style="padding: 7px;font-size: 45px;color: #00acee;" class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/TheRegistryNFT"> <i style="padding: 7px;font-size: 25px;color: #000000;" class="fab fa-twitter"></i></a>
         
-          <a href="https://www.instagram.com/theregistry_nft/"> <i style="padding: 7px;font-size: 45px;color: #e95950;" class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/theregistry_nft/"> <i style="padding: 7px;font-size: 25px;color: #000000;" class="fab fa-instagram"></i></a>
          
-         <p><br>Copyright © 2022, The Registry.<br>
+         <p style="text-transform: none;"><br>Copyright © 2022, The Registry.<br>
          All trademarks and copyrights belong to their respective owners<br>
           Built on the <img alt="" src="img/solana-sol-logo.svg"
-              style="width: 24px;display: inline-block;" /><a href="https://solana.com/" target="_blank">Solana blockchain.
+              style="width: 24px;display: inline-block;" /><a href="https://solana.com/" target="_blank">Solana Blockchain.
         </a></p>
         
         </center></footer>

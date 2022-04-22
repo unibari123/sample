@@ -64,8 +64,6 @@ body{
 
 
 
-
-
 .clear {
   clear: both;
 }
@@ -361,19 +359,3 @@ margin:auto;
 }
 
 
-/* ================ End Main Navbar ================ */
-
-
-/* ================ Start Footer ================ */
-
-#contact .uk-navbar {
-    background-color: rgba(44, 53, 49, 0) !important;
-}
-
-#contact h1,
-a {
-    color: #000 !important;
-}
-
-
-/* ================ End Footer ================ */

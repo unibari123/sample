@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Registry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="uikit2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+ 
+  <body>
+    <div class="canvas-holder">
+      <canvas id="gradient-canvas" class="canvas">
+      </canvas>
+  </div>
+
+    <section>
+        <!-- Main Navbar -->
+    <div class="header-nav" uk-sticky="animation: uk-animation-slide-top;cls-active:uk-navbar-sticky;show-on-up:true;sel-target:.uk-navbar-container;">
+      <nav class="uk-container uk-navbar">
+          <div class="uk-navbar-left">
+              <ul class="uk-navbar-nav">
+                  <li>
+                      <a class="uk-navbar-item uk-logo" href="https://www.theregistry.world/" uk-scroll><img src="img/favicon-32x32.png" alt="">THE REGISTRY
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="uk-navbar-right">
+              <ul class="uk-navbar-nav uk-visible@m">
+                  <li><a class="uk-text-large" href="metaverse.html" uk-scroll>METAVERSE</a></li>
+                  <li><a class="uk-text-large" href="w2t3.html" uk-scroll>W2T3 SOLUTIONS</a></li>
+                  <li><a class="uk-text-large" href="https://www.theregistry.world/#roadmap" uk-scroll>ROADMAP</a></li>
+                  <li><a class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>ABOUT US</a></li>
+                  <li><a class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>FAQ</a></li>
+                  <div class="uk-navbar-item">
+                      <li>
+                        <a href="https://discord.gg/TheRegistry"><i style="font-size: 20px;color: #000000;" class="fab fa-discord"></i></a>
+                      </li>
+                  </div>
+                  <div class="uk-navbar-item">
+                      <li>
+                          <a href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                      </li>
+                  </div>
+                  <div class="uk-navbar-item">
+                      <li>
+                          <a href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                      </li>
+                  </div>
+                  <div class="uk-navbar-item">
+                      <li><a class="uk-button uk-button-default rounded-btn" href="" uk-tooltip="Mint Date TBA">Mint</a></li>
+                  </div>
+              </ul>
+              <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #sidenav" style="min-height: 0;"></a>
+          </div>
+      </nav>
+  </div>
+
+
+  <div id="sidenav" uk-offcanvas="flip: true; mode: reveal" class="uk-offcanvas">
+      <div class="uk-offcanvas-bar">
+          <ul class="uk-nav">
+        
+              <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="metaverse.html" uk-scroll>METAVERSE</a></li>
+              <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="w2t3.html" uk-scroll>W2T3 SOLUTIONS</a></li>
+              <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="https://www.theregistry.world/#roadmap" uk-scroll>ROADMAP</a>
+              </li>
+              <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>ABOUT US</a></li>
+              <li><a uk-toggle="target: #sidenav" class="uk-text-large" href="https://www.theregistry.world/#faq" uk-scroll>FAQ</a></li>
+              <div class="uk-navbar-item">
+                  <li>
+                    <a href="https://discord.gg/TheRegistry"><i style="font-size: 20px;color: #000000;" class="fab fa-discord"></i></a>
+                  </li>
+                  <li>
+                      <a uk-toggle="target: #sidenav" href="https://twitter.com/TheRegistryNFT" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="twitter"></a>
+                  </li>
+                  <li>
+                      <a uk-toggle="target: #sidenav" href="https://www.instagram.com/theregistry_nft/" class="uk-icon-button uk-margin-small-right" target="_blank" uk-icon="instagram"></a>
+                  </li>
+              </div>
+              <div class="uk-navbar-item">
+                  <li><a class="uk-button uk-button-default rounded-btn" href="#" uk-tooltip="Mint Date TBA">Mint</a>
+                  </li>
+              </div>
+          </ul>
+      </div>
+  </div>
+
+     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+      <script src="main.js"></script>
+     
+      <div class="content">
+        <div class="info">
+          <br><br>
+          <h3 style="color:#226A80">The Registry</h3><br>
+          <p>Our metaverse is the combination of all 3,300 pieces of The Registry NFT, varying
+by land archetypes (Grassland, Mountain, Coast, Desert) and tiers (Gold, Platinum,
+Diamond). </p><div class="content2">
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/Ibm3WhfLk08' frameborder='0' allowfullscreen></iframe></div>
+</div></div>
+<div class="clear"><br></div>
+<h3 style="color:#226A80"><br>Find your piece of land!
+</h3><br>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<style>
+model-viewer {
+  width: 100%;
+  height: 300px;
+}
+</style>
+          <p>Explore the beta version of our metaverse, each piece of our 3,300 NFTs represent
+one exact piece of land in our metaverse. Find your piece of land and our partners’
+Headquarters here! </p><br><p style="text-align: center;  font-size: 1.3rem;
+"><i>To be revealed!!</i></p><br>
+<!-- <model-viewer src="school/school.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer> -->
+<div class="w3-content w3-display-container">
+  <img class="mySlides10" src="img/model slider/coast_preview2.png" style="width:100%">
+  <img class="mySlides10" src="img/model slider/desert_preview1.png" style="width:100%">
+  <img class="mySlides10" src="img/model slider/grasslands_preview.png" style="max-width:100%">
+  <img class="mySlides10" src="img/model slider/mountain_preview2.png" style="width:100%">
+
+  <button class="w3-button1 w3-black w3-display-left" onclick="plusDivs(-1, 9)">&#10094;</button>
+<button class="w3-button1 w3-black w3-display-right" onclick="plusDivs(1, 9)">&#10095;</button>
+</div>
+<style>
+div.gallery {
+ 
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 33.3%;
+}
+
+@media only screen and (max-width: 900px) {
+  .responsive {
+    width: 33%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<div class="clear"><br><br></div>
+<h3 style="color:#226A80"><br>Partnership Headquarters 
+</h3><br>
+      
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer class="3d" src="models/Casino A1.glb"  camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Parlay <br>(Deed #1237, Mountain)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/hawksight.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Hawksight <br>(Deed #882, Mountain)
+
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Degen Ape Academy
+      <br>(Deed #2593, Grassland)
+    </div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer class="3d" src="models/Balloon Building.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Balloonsville<br>(Deed #3264, Coast)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/Kuggen Building Color.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">MatricaLabs<br>(Deed #3190, Coast)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/Tree1A.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Famous Fox Federation <br>(Deed #2596, Grassland)
+    </div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer class="3d" src="models/Bull1A.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">BullEmpire<br>(Deed #1171, Desert)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/CastlegGreenA1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Fellowship<br>(Deed #2370, Grassland)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/Pawn ShopA1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Pawnshop Gnomies<br>(Deed #2831, Grassland)
+    </div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer class="3d" src="models/RabiteA1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Bunny Warriors<br>(Deed #1838, Mountain)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/AlpachaA1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Alpacaland<br>(Deed #1841, Mountain)
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/Parallax Website File.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Headquarters<br>(Deed #1306, Desert)
+    </div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/Ice CastleA1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Iced<br>(Deed #1120, Mountain)
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/BasketA1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Shaq<br>(Deed #1299, Desert)
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <model-viewer src="models/solbigbrain.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+
+    <div class="desc">Sol Big Brain<br>(Deed #3266, Coast)</div>  </div>
+</div>
+<div class="clear"></div>
+<div class="content">
+  <div class="clear"><br><br></div>
+          <h3 style="color:#226A80"><br>Phase 2 - Sample Buildings
+</h3><br>
+          <p>From Phase 2 onwards, landowners can construct different property types on their
+land, each property yielding different rental returns according to tiers. Please refer to <a href="w2t3.html"><b>W2t3 Solutions</b></a> for more information!
+ </p>
+<style>
+* {
+  box-sizing: border-box;
+
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  
+  
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+<br>
+<div class="clear"><br></div>
+   <h5 style="color:#226A80"><b>Retail Stores</b></h5>
+   <style>
+     
+     .w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-button:hover{color:#fff!important;background-color:#000!important}
+.w3-button1:hover{color:#fff!important;background-color:#000!important}
+
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
+.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:black;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-button1{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:black;background-color:whitesmoke;text-align:center;cursor:pointer;white-space:nowrap}
+ 
+.w3-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3-large{font-size:18px!important}
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+
+ </style>
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#E1C340;color: #FFFFFF;">Gold</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey"><div class="row">
+  <div class="column">
+    <div class="w3-content w3-display-container">
+      <img class="mySlides1" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+      <img class="mySlides1" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+    
+    </div>  </div></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#D7D7D7;color: #172243;">Platinum</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides2" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+        <img class="mySlides2" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+      
+      </div>  </li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header"  style="background-color:#172243;color: #FFFFFF;"">Diamond</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides3" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+        <img class="mySlides3" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+        <img class="mySlides3" src="img.jpg" style="max-width:100%">
+        <img class="mySlides3" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 2)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 2)">&#10095;</button>
+      </div>  </li>
+  </ul>
+</div>
+<div class="clear"></div>
+<h5 style="color:#226A80"><br><b>Entertainment Venues</b></h5>
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#E1C340;color: #FFFFFF;">Gold</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey"><div class="row">
+  <div class="column">
+    <div class="w3-content w3-display-container">
+      <img class="mySlides4" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+      <img class="mySlides4" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+      <img class="mySlides4" src="img.jpg" style="max-width:100%">
+      <img class="mySlides4" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+  
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 3)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 3)">&#10095;</button>
+    </div>
+    </div></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header"  style="background-color:#D7D7D7;color: #172243;">Platinum</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides5" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+        <img class="mySlides5" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+        <img class="mySlides5" src="img.jpg" style="max-width:100%">
+        <img class="mySlides5" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 4)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 4)">&#10095;</button>
+      </div>  </li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header"  style="background-color:#172243;color: #FFFFFF;">Diamond</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides6" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+        <img class="mySlides6" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+        <img class="mySlides6" src="img.jpg" style="max-width:100%">
+        <img class="mySlides6" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 5)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 5)">&#10095;</button>
+      </div>
+      </li>
+  </ul>
+</div>
+<div class="clear"></div>
+<h5 style="color:#226A80"><br>Commercial Venues</h5>
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color: #E1C340; color: #FFFFFF;">Gold</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey"><div class="row">
+  <div class="column">
+    <div class="w3-content w3-display-container">
+      <img class="mySlides7" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+      <img class="mySlides7" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+      <img class="mySlides7" src="img.jpg" style="max-width:100%">
+      <img class="mySlides7" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+  
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 6)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 6)">&#10095;</button>
+    </div>
+    </div></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header"  style="background-color:#D7D7D7;color: #172243;">Platinum</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides8" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+        <img class="mySlides8" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+        <img class="mySlides8" src="img.jpg" style="max-width:100%">
+        <img class="mySlides8" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 7)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 7)">&#10095;</button>
+      </div>  </li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header"  style="background-color:#172243;color: #FFFFFF;">Diamond</li>
+    <li><p>Random text</p><p>Random text</p><p>Random text</p></li>
+    <li class="grey">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides9" src="img.png" style="width:100%">
+        <img class="mySlides9" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+        <img class="mySlides9" src="img.jpg" style="max-width:100%">
+        <img class="mySlides9" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 8)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 8)">&#10095;</button>
+      </div>  </li>
+  </ul>
+</div>  <div class="clear"><br><br></div>
+<div class="content">
+        <div class="info">
+
+   <h5 style="color:#226A80">Other property types coming up, stay tuned!<h5>
+<br>
+<footer><center><br><br><br>   <h5 style="color:#111">Stay up-to-date with our project<h5><br>
+        
+  <a href="https://discord.gg/TheRegistry"><i style="padding: 7px;font-size: 25px;color: #000000;" class="fab fa-discord"></i></a>
+</a> 
+
+<a href="https://twitter.com/TheRegistryNFT"> <i style="padding: 7px;font-size: 25px;color: #000000;" class="fab fa-twitter"></i></a>
+
+  <a href="https://www.instagram.com/theregistry_nft/"> <i style="padding: 7px;font-size: 25px;color: #000000;" class="fab fa-instagram"></i></a>
+ 
+ <p style="text-transform: none;"><br>Copyright © 2022, The Registry.<br>
+ All trademarks and copyrights belong to their respective owners<br>
+  Built on the <img alt="" src="img/solana-sol-logo.svg"
+      style="width: 24px;display: inline-block;" /><a href="https://solana.com/" target="_blank">Solana Blockchain.
+</a></p>
+
+</center></footer>
+</div>
+  </div></center></div></section>
+  <script>
+    var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var slideId = ["mySlides1", "mySlides2", "mySlides3",  "mySlides4",  "mySlides5",  "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10" ]
+    showDivs(1, 0);
+    showDivs(1, 1);
+    showDivs(1, 2);
+    showDivs(1, 3);
+    showDivs(1, 4);
+    showDivs(1, 5);
+    showDivs(1, 6);
+    showDivs(1, 7);
+    showDivs(1, 8);
+    showDivs(1, 9);
+    function plusDivs(n, no) {
+      showDivs(slideIndex[no] += n, no);
+    }
+    
+    function showDivs(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
+  <script src="src/js/animate.js"></script>
+  </body>
+</html>
